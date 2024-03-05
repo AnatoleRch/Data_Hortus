@@ -1,28 +1,27 @@
 <template>
-  <v-app>
+<v-app>
   <!-- une barre de navigation -->
   <v-app-bar
-  color="primary"
-  density="compact">
-  <v-img
-  :height="100"
-  aspect-ratio="1/1"
-  src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
-  ></v-img>
-  <v-btn to="/">Home</v-btn>
-  <v-btn to="/Serre">S</v-btn>
-  <v-btn to="/Pilotage">P</v-btn>
-  <v-btn to="/Historique">H</v-btn>
-
-</v-app-bar>
-
-<!-- la zone où sera affichée les différentes "pages"-->
-<v-main>
-<v-container class="page">
-<!-- les "composant view" s'afficheront ici -->
-<RouterView />
-</v-container>
-</v-main>
+    color="rgb(58, 90, 64)"
+    density="compact">
+    <v-img
+      position="left"
+      :height="100"
+      aspect-ratio="1/1"
+      src="\src\assets\mini_logo.png"
+    ></v-img>
+    <v-btn to="/Serre">Serre</v-btn>
+    <v-btn to="/Pilotage">Pilotage</v-btn>
+    <v-btn to="/Historique">Historique</v-btn>
+  </v-app-bar>
+  <!-- la zone où sera affichée les différentes "pages"-->
+  <v-main>
+    <v-container class="page">
+      <!-- les "composant view" s'afficheront ici -->
+      <RouterView />
+    </v-container>
+    
+  </v-main>
 </v-app>
 </template>
 
@@ -34,8 +33,5 @@
 <style scoped>
 .page{
 text-align: center;
-}
-v-img{
-  float: left
 }
 </style>
